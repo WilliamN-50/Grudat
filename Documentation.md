@@ -210,7 +210,7 @@ This section is empty.
 
 ## Source files
 
-[domain-coloring.py](https://gits-15.sys.kth.se/grudat21/wnguyen-ovn7/blob/master/domain_coloring.py)
+[domain-coloring.py](https://github.com/WilliamN-50/Grudat/blob/main/domain_coloring.py)
 
 ## References
 
