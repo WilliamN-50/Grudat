@@ -379,16 +379,16 @@ def main():
     # Winding number
     winding = winding_num(hue, [(0, 0), (max_elem, max_elem)])
     print("This function has a winding number of:", str(winding))
+    
+    # Branch cuts
+    branch = branch_cut(hue, value, re_range, im_range, step)
+    if branch:
+        print("This function has a branch cut or branch point.")
 
     # Zeros
     root, index = zeros(hue, value, re_range, im_range, tol=9*10**(-3))
     re_range, im_range, step = zoom_fit_zero(index, value, re_range, im_range, step, light_val=0.99)
     result2 = func_grid(func, re_range=re_range, im_range=im_range, step=step)
-
-    # Branch cuts
-    branch = branch_cut(hue, value, re_range, im_range, step)
-    if branch:
-        print("This function has a branch cut or branch point.")
 
     # Domain coloring
     domain_coloring(result2)
